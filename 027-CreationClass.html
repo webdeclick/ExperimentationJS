@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<title>Classe personalisée attribut prototype</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+function StringBuffer(){
+	this.chainesInternes=[];
+	this.append=function(chaine){
+		this.chainesInternes.push(chaine);
+		};
+		
+/*	this.clear=function(){
+		this.chainesInternes.splice(0,this.chainesInternes.length);
+		};*/
+	
+	this.toString=function(){
+		return this.chainesInternes.join("");
+		};
+}
+
+sb=new StringBuffer();
+sb.append("premiere chaîne");
+sb.append(" et ");
+sb.append("deuxieme chaîne ");
+resultat=sb.toString();
+document.write(resultat);
+</script>
+
+</body>
+</html>

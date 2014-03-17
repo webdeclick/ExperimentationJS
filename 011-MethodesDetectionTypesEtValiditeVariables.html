@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<title>Détection du type et validité d'une variable</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+tableau = [];
+document.write(isEmpty(tableau));
+document.write(isFunction(tableau));
+document.write(isArray(tableau));
+
+booleen=true;
+document.write(isFunction(booleen));
+document.write(isArray(booleen));
+document.write(isBoolean(booleen));
+
+chaine="Ceci est une chaine de test";
+document.write(isEmpty(chaine));
+document.write(isFunction(chaine));
+document.write(isArray(chaine));
+document.write(isBoolean(chaine));
+document.write(isString(chaine));
+
+</script>
+
+</body>
+</html>

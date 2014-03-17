@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<title>Classe personalisée attribut prototype</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+monInstance=new Object();
+Object.prototype.monAttribut="Valeur par défaut:";
+Object.prototype.maFonction=function(){
+	return " test de late binding";
+	};
+retourAttribut=monInstance.monAttribut;
+retourmaFonction=monInstance.maFonction();
+
+document.write(retourAttribut);
+document.write(retourmaFonction);
+
+document.write("<br>");
+
+Object.prototype.monAttribut1="Valeur par défaut 1:";
+Object.prototype.maFonction1=function(){
+	return " test de late binding 1";
+	};
+	
+retourAttribut1=monInstance.monAttribut1;
+retourmaFonction1=monInstance.maFonction1();
+
+document.write(retourAttribut1);
+document.write(retourmaFonction1);
+
+</script>
+
+</body>
+</html>

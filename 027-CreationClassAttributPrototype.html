@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<title>Classe personalisée attribut prototype</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+function StringBuffer(){
+	this.chainesInternes=[];
+}
+
+StringBuffer.prototype.append=function(chaine){
+		this.chainesInternes.push(chaine);
+		};
+		
+/*StringBuffer.prototype.clear=function(){
+		this.chainesInternes.splice(0,this.chainesInternes.length);
+		};*/
+	
+StringBuffer.prototype.toString=function(){
+		return this.chainesInternes.join("");
+		};
+
+
+
+sb=new StringBuffer();
+sb.append("premiere chaîne");
+sb.append(" et ");
+sb.append("deuxieme chaîne ");
+resultat=sb.toString();
+document.write(resultat);
+
+document.write("<br>");
+
+sc=new StringBuffer();
+sc.append("premiere chaîne 2 ");
+sc.append(" et ");
+sc.append("deuxieme chaîne 2 ");
+resultat1=sc.toString();
+document.write(resultat1);
+
+
+
+
+</script>
+
+</body>
+</html>
